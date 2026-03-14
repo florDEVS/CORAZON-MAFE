@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corazones Decorativos</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #a2cffe 0%, #d6eaff 100%);
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+            color: #2471a3;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px #fff, 0 1px 0 #2980b9;
+            z-index: 3;
+        }
+        .decor {
+            position: absolute;
+            pointer-events: auto;
+        }
+        .decor svg {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            filter: drop-shadow(0 2px 8px #2980b9);
+            transition: transform 0.2s;
+        }
+        .decor svg:hover {
+            transform: scale(1.2);
+        }
+        /* Corazones de fondo extra */
+        .bg-heart {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.18;
+            z-index: 0;
+        }
+        .center-message {
+            position: relative;
+            z-index: 2;
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 24px;
+            box-shadow: 0 4px 24px #2980b933;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.2rem;
+            color: #2980b9;
+            text-align: center;
+            min-width: 320px;
+            min-height: 60px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.4s, transform 0.4s;
+        }
+        .center-message.show {
+            opacity: 1;
+            transform: scale(1.1);
+            animation: pop 0.5s;
+        }
+        @keyframes pop {
+            0% { opacity: 0; transform: scale(0.8);}
+            60% { opacity: 1; transform: scale(1.2);}
+            100% { opacity: 1; transform: scale(1);}
+        }
+    </style>
+</head>
+<body>
+    <div class="header">ATT: Flores 💙</div>
+    <!-- Corazones decorativos en los bordes -->
+    <div class="decor" style="top:20px; left:20px;">
+        <svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 7a7 7 0 0 1 13 5c0 8.65-13 17-13 17z" fill="#3498db"/></svg>
+    </div>
+    <div class="decor" style="top:20px; right:20px;">
+        <svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 7a7 7 0 0 1 13 5c0 8.65-13 17-13 17z" fill="#2980b9"/></svg>
+    </div>
+    <div class="decor" style="bottom:20px; left:40px;">
+        <svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 7a7 7 0 0 1 13 5c0 8.65-13 17-13 17z" fill="#5dade2"/></svg>
+    </div>
+    <div class="decor" style="bottom:20px; right:40px;">
+        <svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 7a7 7 0 0 1 13 5c0 8.65-13 17-13 17z" fill="#2471a3"/></svg>
+    </div>
+    <div class="decor" style="top:50%; left:0; transform:translateY(-50%);">
+        <svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 7a7 7 0 0 1 13 5c0 8.65-13 17-13 17z" fill="#2980b9"/></svg>
+    </div>
+    <div class="decor" style="top:50%; right:0; transform:translateY(-50%);">
+        <svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 7a7 7 0 0 1 13 5c0 8.65-13 17-13 17z" fill="#3498db"/></svg>
+    </div>
+    <!-- Corazones de fondo extra -->
+    <div class="bg-heart" style="top:10%; left:15%;">
+        <svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 7a7 7 0 0 1 13 5c0 8.65-13 17-13 17z" fill="#3498db"/></svg>
+    </div>
+    <div class="bg-heart" style="top:80%; left:10%;">
+        <svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 7a7 7 0 0 1 13 5c0 8.65-13 17-13 17z" fill="#2980b9"/></svg>
+    </div>
+    <div class="bg-heart" style="top:30%; right:12%;">
+        <svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 7a7 7 0 0 1 13 5c0 8.65-13 17-13 17z" fill="#5dade2"/></svg>
+    </div>
+    <div class="bg-heart" style="top:70%; right:18%;">
+        <svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 7a7 7 0 0 1 13 5c0 8.65-13 17-13 17z" fill="#2471a3"/></svg>
+    </div>
+    <div class="bg-heart" style="top:50%; left:50%; transform:translate(-50%, -50%) scale(2);">
+        <svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 7a7 7 0 0 1 13 5c0 8.65-13 17-13 17z" fill="#a2cffe"/></svg>
+    </div>
+    <!-- Mensaje central -->
+    <div class="center-message" id="message"></div>
+    <script>
+        const frases = [
+            "TE AMO",
+            "TE QUIERO",
+            "CUIDATE",
+            "ERES LA MEJOR"
+        ];
+        let index = 0;
+        let primerClick = true;
+        const message = document.getElementById('message');
+        const corazones = document.querySelectorAll('.decor');
+
+        function mostrarMensaje(texto) {
+            message.classList.remove('show');
+            setTimeout(() => {
+                message.textContent = texto;
+                message.classList.add('show');
+            }, 100);
+        }
+
+        corazones.forEach(corazon => {
+            corazon.addEventListener('click', () => {
+                if (primerClick) {
+                    mostrarMensaje("Para Mafe 💙");
+                    primerClick = false;
+                } else {
+                    mostrarMensaje(frases[index]);
+                    index = (index + 1) % frases.length;
+                }
+            });
+        });
+
+        // Mostrar el mensaje inicial al cargar
+        setTimeout(() => {
+            mostrarMensaje("");
+        }, 300);
+    </script>
+</body>
+</html>
